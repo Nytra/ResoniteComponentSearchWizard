@@ -1,6 +1,6 @@
 # ComponentSearchWizard
 
-A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) that provides a wizard for searching for components by type and/or by name, displaying them in a list.
+A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) that provides a wizard for searching for components that exist on slots in the currently focused world. You can search by type and/or by name, and get a list of references as output.
 
 ## Installation
 1. Install [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader).
