@@ -33,7 +33,7 @@ namespace ResoniteComponentSearchWizard
             }
             Slot WizardSlot;
 
-            readonly ReferenceField<Slot> processingRoot;
+            readonly ReferenceField<Slot> searchRoot;
             readonly ReferenceField<Component> componentField;
 
             readonly ValueField<bool> ignoreGenericTypes;
@@ -114,9 +114,9 @@ namespace ResoniteComponentSearchWizard
 
             bool ValidateWizard()
             {
-                if (processingRoot.Reference.Target == null)
+                if (searchRoot.Reference.Target == null)
                 {
-                    UpdateStatusText("No processing root provided!");
+                    UpdateStatusText("No search root provided!");
                     return false;
                 }
 
@@ -170,7 +170,7 @@ namespace ResoniteComponentSearchWizard
 
             List<Component> GetSearchComponents()
             {
-                return processingRoot.Reference.Target?.GetComponentsInChildren((Component c) => IsComponentMatch(c));
+                return searchRoot.Reference.Target?.GetComponentsInChildren((Component c) => IsComponentMatch(c));
             }
 
             ComponentSearchWizard(Slot x)
@@ -189,8 +189,8 @@ namespace ResoniteComponentSearchWizard
                 //canvasPanel.Canvas.Slot.AttachComponent<Image>().Tint.Value = new color(1f, 0.2f);
 
                 Slot Data = WizardSlot.AddSlot("Data");
-                processingRoot = Data.AddSlot("processingRoot").AttachComponent<ReferenceField<Slot>>();
-                processingRoot.Reference.Value = WizardSlot.World.RootSlot.ReferenceID;
+                searchRoot = Data.AddSlot("searchRoot").AttachComponent<ReferenceField<Slot>>();
+                searchRoot.Reference.Value = WizardSlot.World.RootSlot.ReferenceID;
                 componentField = Data.AddSlot("componentField").AttachComponent<ReferenceField<Component>>();
                 ignoreGenericTypes = Data.AddSlot("ignoreGenericTypes").AttachComponent<ValueField<bool>>();
                 showDetails = Data.AddSlot("showDetails").AttachComponent<ValueField<bool>>();
@@ -224,9 +224,9 @@ namespace ResoniteComponentSearchWizard
                 UI.Style.PreferredWidth = 400f;
                 UI.Style.MinWidth = 400f;
 
-                UI.Text("Processing Root:").HorizontalAlign.Value = TextHorizontalAlignment.Left;
+                UI.Text("Search Root:").HorizontalAlign.Value = TextHorizontalAlignment.Left;
                 UI.Next("Root");
-                UI.Current.AttachComponent<RefEditor>().Setup(processingRoot.Reference);
+                UI.Current.AttachComponent<RefEditor>().Setup(searchRoot.Reference);
 
                 UI.Spacer(24f);
 
