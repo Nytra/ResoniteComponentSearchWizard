@@ -17,3 +17,6 @@ The Search Nice Name option will take the component name as, for example, ValueF
 You can check Exact Match to match the whole string as you typed it, instead of checking if the component name only contains that string. <br>
   
 You can check Spawn Detail Text which gives a text with the component names, their Enabled state, and the hierarchy path to get to them. <br>
+
+## History
+Forked from NeosComponentSearchWizard by Nytra, which was forked from NeosLogixCleanupWizard by XDelta.
