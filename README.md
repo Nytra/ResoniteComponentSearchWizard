@@ -1,5 +1,7 @@
 # ComponentSearchWizard
 
+![2023-09-28 05 28 35](https://github.com/Nytra/ResoniteComponentSearchWizard/assets/14206961/d3b4c346-83fa-4594-aba4-15923d60f93f)
+
 A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) that provides a wizard for searching for components that exist on slots in the currently focused world. You can search by type and/or by name, and get a list of references as output.
 
 ## Installation
