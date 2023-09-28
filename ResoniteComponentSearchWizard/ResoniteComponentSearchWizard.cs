@@ -43,7 +43,6 @@ namespace ResoniteComponentSearchWizard
             readonly ValueField<bool> matchCase;
             //readonly ValueField<bool> allowChanges;
             readonly ValueField<bool> searchNiceName;
-            //readonly ValueField<bool> conditionMode;
             readonly ValueField<int> maxResults;
             readonly ValueField<bool> exactMatch;
 
@@ -177,7 +176,6 @@ namespace ResoniteComponentSearchWizard
             {
                 WizardSlot = x;
                 WizardSlot.Tag = "Developer";
-                //WizardSlot.OnPrepareDestroy += Slot_OnPrepareDestroy;
                 WizardSlot.PersistentSelf = false;
 
                 LegacyCanvasPanel canvasPanel = WizardSlot.AttachComponent<LegacyCanvasPanel>();
@@ -196,7 +194,6 @@ namespace ResoniteComponentSearchWizard
                 showDetails = Data.AddSlot("showDetails").AttachComponent<ValueField<bool>>();
                 //confirmDestroy = Data.AddSlot("confirmDestroy").AttachComponent<ValueField<bool>>();
                 nameField = Data.AddSlot("nameField").AttachComponent<ValueField<string>>();
-                //conditionMode = Data.AddSlot("conditionMode").AttachComponent<ValueField<bool>>();
                 matchCase = Data.AddSlot("matchCase").AttachComponent<ValueField<bool>>();
                 //allowChanges = Data.AddSlot("allowChanges").AttachComponent<ValueField<bool>>();
                 searchNiceName = Data.AddSlot("searchNiceName").AttachComponent<ValueField<bool>>();
@@ -292,14 +289,6 @@ namespace ResoniteComponentSearchWizard
 
                 WizardSlot.PositionInFrontOfUser(float3.Backward, distance: 1f);
             }
-
-            //void Slot_OnPrepareDestroy(Slot slot) {
-            //	if (slot.World != null && worldWizardMap.ContainsKey(slot.World))
-            //	{
-            //		worldWizardMap[slot.World] = null;
-            //		worldWizardMap.Remove(slot.World);
-            //	}
-            //}
 
             void SearchPressed(IButton button, ButtonEventData eventData)
             {
