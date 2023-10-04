@@ -48,6 +48,7 @@
       <HintPath>G:\SteamLibrary\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ValueTuple" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ResoniteComponentSearchWizard.cs" />
