@@ -177,7 +177,7 @@ namespace ResoniteComponentSearchWizard
 				WizardSlot = x;
 				WizardSlot.Tag = "Developer";
 				WizardSlot.PersistentSelf = false;
-				WizardSlot.LocalScale *= 0.00075f; 
+				WizardSlot.LocalScale *= 0.0008f; 
 
 				Slot Data = WizardSlot.AddSlot("Data");
 				searchRoot = Data.AddSlot("searchRoot").AttachComponent<ReferenceField<Slot>>();
