@@ -11,7 +11,7 @@ namespace ResoniteComponentSearchWizard
 	{
 		public override string Name => "Component Search Wizard";
 		public override string Author => "Nytra";
-		public override string Version => "1.1.2";
+		public override string Version => "1.1.3";
 		public override string Link => "https://github.com/Nytra/ResoniteComponentSearchWizard";
 
 		const string WIZARD_TITLE = "Component Search Wizard (Mod)";
