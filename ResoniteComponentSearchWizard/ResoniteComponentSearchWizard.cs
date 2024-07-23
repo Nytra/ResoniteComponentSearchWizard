@@ -201,7 +201,7 @@ namespace ResoniteComponentSearchWizard
 				UI.Canvas.MarkDeveloper();
 				UI.Canvas.AcceptPhysicalTouch.Value = false;
 
-				UI.SplitHorizontally(0.5f, out RectTransform left, out RectTransform right);
+				UI.SplitHorizontally(0.35f, out RectTransform left, out RectTransform right);
 
 				left.OffsetMax.Value = new float2(-2f);
 				right.OffsetMin.Value = new float2(2f);
