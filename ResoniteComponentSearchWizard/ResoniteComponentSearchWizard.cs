@@ -195,13 +195,13 @@ namespace ResoniteComponentSearchWizard
 				results = Data.AddSlot("referenceMultiplexer").AttachComponent<ReferenceMultiplexer<Component>>();
 				exactMatch = Data.AddSlot("exactMatch").AttachComponent<ValueField<bool>>();
 
-				UIBuilder UI = RadiantUI_Panel.SetupPanel(WizardSlot, WIZARD_TITLE.AsLocaleKey(), new float2(800f, 756f));
+				UIBuilder UI = RadiantUI_Panel.SetupPanel(WizardSlot, WIZARD_TITLE.AsLocaleKey(), new float2(1000f, 756f));
 				RadiantUI_Constants.SetupEditorStyle(UI);
 
 				UI.Canvas.MarkDeveloper();
 				UI.Canvas.AcceptPhysicalTouch.Value = false;
 
-				UI.SplitHorizontally(0.5f, out RectTransform left, out RectTransform right);
+				UI.SplitHorizontally(0.35f, out RectTransform left, out RectTransform right);
 
 				left.OffsetMax.Value = new float2(-2f);
 				right.OffsetMin.Value = new float2(2f);
